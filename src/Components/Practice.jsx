@@ -10,7 +10,7 @@ class Practice extends Component {
         };
     }
 
-    componentWillMount() {
+    componentDidMount() {
 
         fetch('https://jsonplaceholder.typicode.com/users')
             // gets data

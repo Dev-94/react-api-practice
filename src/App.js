@@ -6,7 +6,8 @@ import Practice from './Components/Practice';
 function App() {
   return (
     <div className="App">
-      {/* <Koala /> */}
+      // ready for react hook api
+      <Koala />
       <Practice />
     </div>
   );
