@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react";
 
 
 
@@ -14,10 +14,6 @@ const Images = () => {
             .then(response => response.json())
             .then(json => {
                 console.log('image fetch works!')
-                // console.log('json: ' + JSON.stringify(json))
-                // json is an array of objects
-                // json[0].title
-                // json = json.map(data => data.title)
                 setImage(json.slice(count + 1, count + 3));
             });
     }, [count]);

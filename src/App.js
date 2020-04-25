@@ -2,8 +2,9 @@ import React from 'react';
 import './App.css';
 // import Koala from './Components/Koala';
 import Practice from './Components/Practice';
-import Jokes from './Components/Jokes'
-import Images from './Components/Images'
+import Jokes from './Components/Jokes';
+import Images from './Components/Images';
+import Pexels from './Components/Pexels.tsx';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       {/* <Jokes /> */}
       {/* <Koala /> */}
       {/* <Practice /> */}
-      <Images />
+      <Pexels />
+      {/* <Images /> */}
     </div>
   );
 }

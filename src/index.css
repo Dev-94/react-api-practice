@@ -13,6 +13,11 @@ li {
   /* list-style-type: none; */
 }
 
+img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Roboto', 'Courier New',
     monospace;
