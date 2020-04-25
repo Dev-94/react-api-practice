@@ -15,7 +15,13 @@ class Joke extends Component {
         // const url = 'https://some-random-api.ml/facts/koala';
         const url = 'https://joke3.p.rapidapi.com/v1/joke';
 
-        fetch(url)
+        fetch(url, {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "joke3.p.rapidapi.com",
+                "x-rapidapi-key": "ed72fe8d65msh9f0ecb50dd7c28fp1dabd8jsn14921d62feb3"
+            }
+        })
             // gets data
             .then(res => res.json())
 
@@ -46,7 +52,7 @@ class Joke extends Component {
 
                     <ul>
                         <div key={jokes.id} >
-                            joke: {jokes.content}
+                            Joke: {jokes.content}
                         </div>
 
                     </ul>

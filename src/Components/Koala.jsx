@@ -12,7 +12,7 @@ class Koala extends Component {
     }
 
     componentDidMount() {
-        const url = 'https://some-random-api.ml/facts/koala';
+        const url = 'https://some-random-api.ml/facts/panda';
 
         fetch(url)
             // gets data
@@ -42,17 +42,14 @@ class Koala extends Component {
 
             return (
                 <div>
-
                     <ul>
-                        {koalas.map(fact => (
-                            <li key={fact.id}>
-                                Fact: {fact}}
+                        <div>
+                            koala: {koalas.content}
+                        </div>
 
-                            </li>
-                        ))}
                     </ul>
 
-                </div >
+                </div>
             );
 
         }

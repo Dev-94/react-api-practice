@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       {/* ready for react hook api */}
       <Jokes />
-      <Koala />
+      {/* <Koala /> */}
       <Practice />
     </div>
   );
