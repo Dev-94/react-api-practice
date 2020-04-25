@@ -2,10 +2,15 @@ import React, { useEffect, useState } from "react";
 
 const Pexels = () => {
 
-    const [image: any, setImage: any] = useState([]);
-    var [count: number, setCount: any] = useState(0);
+    var [image, setImage] = useState({
+        id: 0,
+        url: "",
+        tags: []
+    });
+    var [count, setCount] = useState(0);
 
     useEffect(() => {
+
         const url: string = 'https://mlemapi.p.rapidapi.com/randommlem';
         const specs: object = {
             "method": "GET",
@@ -16,12 +21,12 @@ const Pexels = () => {
         }
 
         fetch(url, specs)
-            .then((response: object) => {
+            .then((response: any) => {
                 console.log(response);
                 return response.json();
             })
             .then((json: any) => {
-                console.log('Pexels fetch is working: ' + json)
+                console.log('fetch is working!: ' + JSON.stringify(json))
                 setImage(json)
             })
     }, [count])
@@ -29,13 +34,16 @@ const Pexels = () => {
 
 
     return (
-        <div>
+        < div >
             <button onClick={() => {
                 setCount(count + 1)
             }}>
-                {count}
+                Get Animal
             </button>
-            < img src={image.url} />
+            <div>
+                < img key={image.id} src={image.url} />
+                < p>{image.tags}</p>
+            </div>
 
         </div >
 
