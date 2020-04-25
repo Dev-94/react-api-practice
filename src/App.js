@@ -9,9 +9,9 @@ function App() {
   return (
     <div className="App">
       {/* ready for react hook api */}
-      <Jokes />
+      {/* <Jokes /> */}
       {/* <Koala /> */}
-      <Practice />
+      {/* <Practice /> */}
       <Images />
     </div>
   );

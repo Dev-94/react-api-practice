@@ -14,11 +14,11 @@ const Images = () => {
             .then(response => response.json())
             .then(json => {
                 console.log('image fetch works!')
-                console.log('json: ' + JSON.stringify(json))
+                // console.log('json: ' + JSON.stringify(json))
                 // json is an array of objects
                 // json[0].title
                 // json = json.map(data => data.title)
-                setImage(json);
+                setImage(json.slice(count + 1, count + 3));
             });
     }, [count]);
 
@@ -26,24 +26,18 @@ const Images = () => {
     return (
         <div>
             <ul>
+                <button onClick={() => setCount(count + 1)}> Get Images</button>
+
                 {count}
                 {image.map(data => (
-                    <li key={data.id}>
+
+                    < li key={data.id} >
                         {data.title}
-                        <img src={data.thumbnailUrl} alt={`${data.title}`} />
+                        < img src={data.thumbnailUrl} alt={`${data.title}`} />
                     </li>
                 ))}
 
 
-
-
-                {/* {image.map(data => (
-                    <li key={data.id}>
-                        <img src={data.thumbnailUrl} alt={`${data.title}`} />
-                    </li>
-
-                ))} */}
-                <button onClick={() => setCount(count + 1)}> Get Images</button>
 
             </ul>
         </div>

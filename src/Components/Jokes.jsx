@@ -38,6 +38,7 @@ class Joke extends Component {
 
 
 
+
     render() {
 
         var { isLoaded, jokes } = this.state;
@@ -49,13 +50,14 @@ class Joke extends Component {
 
             return (
                 <div>
-
                     <ul>
                         <div key={jokes.id} >
                             Joke: {jokes.content}
                         </div>
 
                     </ul>
+
+
 
                 </div>
             );
