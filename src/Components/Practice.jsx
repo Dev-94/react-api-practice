@@ -17,6 +17,7 @@ class Practice extends Component {
             .then(res => res.json())
             // saves data
             .then(json => {
+                console.log(json)
                 this.setState({
                     isLoaded: true,
                     items: json,

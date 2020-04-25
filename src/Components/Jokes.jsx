@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 
-class Koala extends Component {
+class Joke extends Component {
 
 
     constructor() {
         super()
         this.state = {
-            koalas: [],
+            jokes: [],
             isLoaded: false,
         };
     }
 
     componentDidMount() {
-        const url = 'https://some-random-api.ml/facts/koala';
+        // const url = 'https://some-random-api.ml/facts/koala';
+        const url = 'https://joke3.p.rapidapi.com/v1/joke';
 
         fetch(url)
             // gets data
@@ -24,7 +25,7 @@ class Koala extends Component {
 
                 this.setState({
                     isLoaded: true,
-                    koalas: json,
+                    jokes: json,
                 });
             });
     }
@@ -33,9 +34,9 @@ class Koala extends Component {
 
     render() {
 
-        var { isLoaded, koalas } = this.state;
+        var { isLoaded, jokes } = this.state;
         if (!isLoaded) {
-            return <div>Loading Koala Fact...</div>
+            return <div>Loading Joke...</div>
         }
 
         else {
@@ -44,15 +45,13 @@ class Koala extends Component {
                 <div>
 
                     <ul>
-                        {koalas.map(fact => (
-                            <li key={fact.id}>
-                                Fact: {fact}}
+                        <div key={jokes.id} >
+                            joke: {jokes.content}
+                        </div>
 
-                            </li>
-                        ))}
                     </ul>
 
-                </div >
+                </div>
             );
 
         }
@@ -145,5 +144,5 @@ class Koala extends Component {
 }
 
 
-export default Koala;
+export default Joke;
 
