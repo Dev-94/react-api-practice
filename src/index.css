@@ -6,17 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: cornflowerblue;
-  color: crimson;
-  font-size: larger;
-}
-li {
-  /* list-style-type: none; */
+  color: blanchedalmond;
 }
 
-img {
-  max-width: 200px;
-  max-height: 200px;
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Roboto', 'Courier New',
