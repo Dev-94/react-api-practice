@@ -48,21 +48,19 @@ class Joke extends Component {
 
     render() {
 
-        var { isLoaded, jokes } = this.state;
+        const { id, joke, isLoaded } = this.state;
         const loading = <div>Loading Joke...</div>
-        const joke = <div key={this.state.id} >{this.state.joke} </div>
+        const present = <div key={this.state.id} >{this.state.joke} </div>
 
 
-        if (!isLoaded) {
-            return loading
-        }
+        if (!isLoaded) return loading
 
         else {
 
             return (
                 <div>
                     <ul>
-                        {joke}
+                        {present}
 
                     </ul>
 

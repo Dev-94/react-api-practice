@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 
 const Animals = () => {
 
-    var [image, setImage] = useState({
+    const [image, setImage] = useState({
         id: 0,
         url: "",
         tags: ""
     });
-    var [count, setCount] = useState(0);
+    const [count, setCount] = useState(0);
 
 
     useEffect(() => {
@@ -38,17 +38,18 @@ const Animals = () => {
     const loading = <div><button onClick={() => { setCount(count + 1) }}>Click Me</button><p>Click above for an image</p></div>
 
     if (count === 0) return loading
+    else {
+        return (
 
-    return (
-
-        < div >
+            < div >
 
 
-            {loaded}
+                {loaded}
 
-        </div >
+            </div >
 
-    )
+        )
+    }
 }
 
 export default Animals;
