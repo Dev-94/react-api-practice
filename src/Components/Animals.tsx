@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 
-const Pexels = () => {
+const Animals = () => {
 
     var [image, setImage] = useState({
         id: 0,
         url: "",
-        tags: []
+        tags: ""
     });
     var [count, setCount] = useState(0);
+
 
     useEffect(() => {
 
@@ -22,32 +23,32 @@ const Pexels = () => {
 
         fetch(url, specs)
             .then((response: any) => {
-                console.log(response);
                 return response.json();
             })
             .then((json: any) => {
-                console.log('fetch is working!: ' + JSON.stringify(json))
                 setImage(json)
             })
     }, [count])
 
 
 
+    const loaded = < div ><button onClick={() => { setCount(count + 1) }}>New Image</button><div>< img key={image.id} src={image.url} alt={image.tags} /></div></div >
+
+
+    const loading = <div><p>Click for an Image</p><button onClick={() => { setCount(count + 1) }}>New Image</button></div>
+
+    if (count === 0) return loading
+
     return (
+
         < div >
-            <button onClick={() => {
-                setCount(count + 1)
-            }}>
-                Get Animal
-            </button>
-            <div>
-                < img key={image.id} src={image.url} />
-                < p>{image.tags}</p>
-            </div>
+
+
+            {loaded}
 
         </div >
 
     )
 }
 
-export default Pexels;
+export default Animals;

@@ -1,20 +1,14 @@
 import React from 'react';
 import './App.css';
-// import Koala from './Components/Koala';
-import Practice from './Components/Practice';
-import Jokes from './Components/Jokes';
-import Images from './Components/Images';
-import Pexels from './Components/Pexels.tsx';
+import Joke from './Components/Jokes';
+import Animals from './Components/Animals';
 
 function App() {
   return (
     <div className="App">
-      {/* ready for react hook api */}
-      {/* <Jokes /> */}
-      {/* <Koala /> */}
-      {/* <Practice /> */}
-      <Pexels />
-      {/* <Images /> */}
+      <h1>Hi there</h1>
+      <Joke />
+      <Animals />
     </div>
   );
 }
