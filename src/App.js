@@ -7,6 +7,9 @@ function App() {
   return (
     <div className="App">
       <h1>Hi there</h1>
+
+      <span className="caption">The jokes are called from an API using a lifecycle method. The images are called from an API using hooks and TypeScript.</span>
+
       <h3><Joke /></h3>
       <Animals />
     </div>

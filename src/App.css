@@ -7,12 +7,16 @@
 
 h1 {
   font-size: 400%;
+}
 
+.caption {
+  text-shadow: 2px 2px 2px darkblue;
+  color: salmon;
 }
 
 img {
-  max-width: 500px;
-  max-height: 500px;
+  max-width: 400px;
+  max-height: 400px;
   box-shadow: 2px 2px 2px black;
 
 }
@@ -20,8 +24,8 @@ img {
 img:hover {
   box-shadow: 20px 20px 20px black;
   border-color: black;
-  max-width: 510px;
-  max-height: 510px;
+  max-width: 410px;
+  max-height: 410px;
 
 }
 
